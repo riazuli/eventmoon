@@ -1,0 +1,14 @@
+section#nearby-concert {
+    .nearby-concert-item {
+        position: relative;
+        &:hover {
+            transform: scale(1.025);
+        }
+        @include lg-max {
+            margin: 15px auto;
+        }
+        @include tab-max {
+            max-width: 350px;
+        }
+    }
+}

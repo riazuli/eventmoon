@@ -1,0 +1,383 @@
+/* Welcome Section */
+section#welcome-section {
+    @include mobile-max {
+        .container {
+            overflow-x: hidden;
+        }
+    }
+
+    &.landing-two {
+        background: $white;
+
+        .welcome-content {
+            .comming-soon {
+                .app-store {
+                    &:after {
+                        background: linear-gradient(to right, rgba(231, 61, 163, 0.1), rgba(247, 60, 143, 0.1));
+                    }
+                }
+            }
+
+            h1.welcome-title {
+                color: #140930;
+            }
+
+            .travel-promote-explore {
+                ul {
+                    background: rgba(#FD3B80, .15)
+                }
+            }
+        }
+
+
+
+    }
+
+    min-height: 840px;
+    background: linear-gradient(to right, #FF3B80, #DF41BE);
+    padding: 100px 0;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(to bottom, rgba(#E140B9, .5), rgba(#FE3B82, .5));
+        content: " ";
+        border-radius: 50%;
+        bottom: 35px;
+        right: 35px;
+    }
+
+    .welcome-content {
+        height: 100%;
+
+        .comming-soon {
+
+            @include mobile-max {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            a.comming-soon-btn {
+                font-size: 15px;
+                color: $white;
+                background: $blue;
+                position: relative;
+                padding: 10px 15px;
+                font-weight: 700;
+                letter-spacing: 2.8px;
+                padding-right: 20px;
+
+                @include tab-min {
+                    height: 60px;
+                    margin-left: 45px;
+                    min-width: 193.95px;
+                }
+
+                @include mobile-max {
+                    max-width: 200px;
+                    padding: 20px 10px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+
+                &:hover {
+                    opacity: .75;
+                }
+
+                &:after,
+                &:before {
+                    position: absolute;
+                    height: 100%;
+                    content: " ";
+                    top: 0;
+                    border: 30px solid $blue;
+
+                    @include mobile-max {
+                        display: none;
+                    }
+                }
+
+                &:before {
+                    border-left-color: transparent;
+                    left: -45px;
+                }
+
+                &:after {
+                    border: none;
+                    width: 1px;
+                    background: $white;
+                    right: -10px;
+
+                }
+            }
+
+            img {
+                @include tab-min {
+                    margin-left: 20px;
+                }
+
+                height: 60px;
+            }
+
+            .app-store {
+                position: relative;
+                z-index: 1;
+
+                @include tab-min {
+                    height: 60px;
+                }
+
+                &:after {
+                    width: 90px;
+                    position: absolute;
+                    height: 90px;
+                    border-radius: 50%;
+                    background: red;
+                    background: linear-gradient(to right, rgba(#E73DA3, .58), rgba(#F73C8F, .58));
+                    content: " ";
+                    left: 55%;
+                    top: -80px;
+                    z-index: -1;
+                }
+
+                .app-store-img {
+                    @include tab-min {
+                        height: 60px;
+                        width: 198px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                        @include mobile-max {
+                            max-width: 200px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .play-store {
+                margin-top: 25px;
+
+                @include tab-min {
+                    height: 60px;
+                }
+
+                @include mobile-max {
+                    margin-top: 40px;
+                }
+
+                .play-store-img {
+                    height: 60px;
+                    width: 198px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+
+                        @include mobile-max {
+                            max-width: 200px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        h1.welcome-title {
+            color: $white;
+            font-size: 90px;
+            line-height: 105px;
+            font-weight: 700;
+            margin: 60px 0 45px 0;
+
+            @include tab-max {
+                font-size: 70px;
+                line-height: 85px;
+            }
+
+            @include rwd-max(479) {
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+
+        .welcome-buttons {
+            margin-bottom: 70px;
+
+            a {
+                min-width: 150px;
+                padding: 13px;
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+                border-radius: 10px;
+                font-weight: 600;
+
+                &.see-events {
+                    background: $blue;
+
+                    @include mobile-max {
+                        margin-right: 5px;
+                    }
+
+                    &:hover {
+                        opacity: .75;
+                    }
+                }
+
+                &.get-it {
+                    background: #FBB040;
+                    margin-left: 10px;
+
+                    @include mobile-max {
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+
+                    &:hover {
+                        opacity: .75;
+                    }
+                }
+            }
+        }
+
+        .travel-promote-explore {
+            ul {
+                background: $white;
+                border-radius: 5px;
+
+                
+                @include tab-min {
+                    display: inline-block;
+                    overflow: hidden;
+                }
+
+                @include mobile-max {
+                    padding: 25px 0;
+                }
+
+                .tab-content {
+                    clear: both;
+                    padding: 0px 15px 25px 15px;
+                    text-align: center;
+                    max-width: 93%;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                }
+
+                li {
+                    float: left;
+
+                    &:last-of-type {
+                        a {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    @include mobile-max {
+                        float: none;
+                        text-align: center;
+                    }
+
+                    a {
+                        padding: 20px 50px;
+                        text-align: center;
+                        position: relative;
+                        transition: .25s;
+                        color: #140930;
+
+                        &:after {
+                            content: " ";
+                            background: rgba(245, 61, 145, .3);
+                            height: 50px;
+                            top: 50%;
+                            margin-top: -25px;
+                            width: 1px;
+                            position: absolute;
+                            right: 0;
+
+                            @include mobile-max {
+                                display: none;
+                            }
+                        }
+
+                        img {
+                            &.fade-in {
+                                animation: .5s fadeIn 1 forwards;
+
+                            }
+
+                            @keyframes fadeIn {
+                                0% {
+                                    opacity: .1;
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            font-weight: 600;
+                            font-size: 18px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+                        a {
+                            color: #FD3B80;
+                        }
+                    }
+
+                    &.active {
+                        &:hover {
+                            a {
+                                color: #140930;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .welcome-img {
+        z-index: 1;
+
+        @include lg-max {
+            margin-top: 150px;
+        }
+
+        &:after {
+            position: absolute;
+            width: 550px;
+            content: " ";
+            height: 550px;
+            top: 50%;
+            left: 50%;
+            background: #E3D6FB;
+            opacity: .15;
+            margin-top: -275px;
+            margin-left: -275px;
+            border-radius: 50%;
+        }
+
+        @include mobile-max {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+}

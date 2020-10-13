@@ -1,0 +1,46 @@
+html,
+body {
+    font-size: 16px;
+}
+
+.book-list {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 5px solid #ffcd00;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.book-list table th i {
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.book-list table a,
+.book-list table a i {
+    color: red;
+    display: block;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.success,
+.error {
+    padding: 7px 10px;
+    color: #ffffff;
+    margin: 10px 0 25px;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}

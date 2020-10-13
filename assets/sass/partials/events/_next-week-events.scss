@@ -1,0 +1,89 @@
+.next-week-events {
+    >.container {
+        @include rwd-min(1300) {
+            max-width: 1280px;
+        }
+        .event-item {
+            @include tab-max {
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+        }
+        .week-diff-event-item {
+            position: relative;
+            z-index: 1;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: .5s;
+            &:hover {
+                transform: translateY(-10px);
+            }
+            @include lg-max {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            @include tab-max {
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto; 
+            }    
+            &.week-event-bg-2 {
+                background: url(../images/next-week-events/2.jpg) no-repeat scroll center center / cover;
+            }    
+            &.week-event-bg-3 {
+                background: url(../images/next-week-events/3.jpg) no-repeat scroll center center / cover;
+            }    
+            &:after {
+                position: absolute;
+                width: 100%;
+                height: calc(100% - 125px);
+                background: linear-gradient(180deg, #1D79F3 49.91%, rgba(29, 121, 243, 0) 99.91%);
+                opacity: 0.6;
+                border-radius: 15px;
+                transform: rotate(-180deg);
+                content: " ";
+                z-index: -1;
+                top: 125px;
+                left: 0;
+            }
+    
+            .ads {
+                background: $white;
+                position: absolute;
+                padding: 15px;
+                z-index: 1;
+    
+                a.ad-btn {
+                    font-weight: 700;
+                    font-size: 20px;
+                    font-family: $secondary-font;
+                    background: #FF3B80;
+                    color: #fff;
+                    padding: 5px 22px;
+                    border-radius: 10px;
+                }
+    
+                p.ad-text {
+                    display: inline-block;
+                    margin-top: 10px;
+                    a {
+                        display: inline;
+                        color: $blue;
+                    }
+                }
+            }
+    
+            .absolute-content {
+                    padding-left: 22px;
+                a.visit-now {
+                    margin-bottom: 20px;
+                }
+    
+                h3 {}
+            }
+        }
+    }
+
+
+}

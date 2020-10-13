@@ -1,0 +1,15 @@
+#recently-viewed {
+    // @extend %slice-container;
+    .recently-viewed-item {
+        position: relative;
+        &:hover {
+            transform: scale(1.025);
+        }
+        @include lg-max {
+            margin: 15px auto;
+        }
+        @include tab-max {
+            max-width: 350px;
+        }
+    }
+}

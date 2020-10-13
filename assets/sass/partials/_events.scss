@@ -1,0 +1,138 @@
+#events-wrap {
+    @import 'nearby-destination';
+    @import 'trending-events';
+
+    .today-thisWeek-nextWeek {
+        background: #F3F3F5;
+
+        @import 'events/today-events';
+        @import 'events/next-week-events';
+    }
+
+
+    .event-item {
+        transition: .5s;
+        &:hover {
+            transform: translateY(-10px);
+        }
+        @include lg-max {
+            margin: 15px 0;
+        }
+        @include mobile-max {
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .event-item-img {
+            position: relative;
+
+
+            img {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .event-img-buttons {
+                a {
+                    position: absolute;
+                }
+
+                a.right-top {
+                    background: linear-gradient(to bottom, #1D79F3, #1D26F3);
+                    backdrop-filter: blur(250px);
+                    top: 25px;
+                    right: 10px;
+                    min-width: 115px;
+                    border-radius: 50px;
+                    padding: 12px 0;
+                    @include rwd-max(479) {
+                        padding: 8px 0;
+                        
+                    }
+                }
+
+                a.left-bottom {
+                    background: rgba(#fff, .34);
+                    bottom: 25px;
+                    min-width: 135px;
+                    text-align: center;
+                    padding: 14px 5px;
+                    border-radius: 10px;
+                    color: $white;
+                    font-size: 15px;
+                    font-weight: 600;
+                    left: 25px;
+                    @include rwd-max(479) {
+                        padding: 10px 5px
+                    }
+
+                    &:hover {
+                        background: rgba(#fff, .45);
+                    }
+
+                    i.fa {
+                        margin-right: 5px;
+                    }
+
+                    span {}
+                }
+            }
+        }
+
+        .event-item-content {
+            background: $white;
+            border-radius: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            padding: 25px;
+
+            .event-content {
+                h3 {
+                    font-family: $secondary-font;
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 30px;
+                    letter-spacing: 6px;
+
+                    color: #140930;
+                }
+
+                p {
+                    color: #140930;
+                    margin-top: 15px;
+
+                }
+
+                .event-time {
+                    color: #FE3C81;
+                    font-weight: 600;
+                    margin: 15px 0 20px 0;
+
+                    i.fa {}
+
+                    span {}
+                }
+
+                .buy-now-share-btn {
+                    a {
+                        @include rwd-max(1299) {
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    a.buy-now {}
+
+                    a.share {
+                        i.fa {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+
+}

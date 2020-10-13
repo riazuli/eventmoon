@@ -1,0 +1,94 @@
+// Font sizes
+$primary-font-size: 16px;
+// Font families
+$primary-font: Averta, sans-serif;
+$secondary-font: "Bebas Neue", sans-serif;
+// Colors
+$white: #fff;
+$akashi: #54d6e6; 
+$black: #111;
+$blue: #1D79F3;
+
+
+// Responsive Media Query
+
+$screen-mobile-max: 575px; 
+$screen-tab-min: 576px;
+$screen-tab-max: 767px;
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+$screen-xl-min: 1200px;
+
+
+// Mobile devices
+@mixin mobile-max {
+    @media (max-width: #{$screen-mobile-max}) {  
+        @content;
+    }
+}
+
+@mixin tab-min {
+    @media (min-width: #{$screen-tab-min}) { 
+        @content;
+    }
+}
+
+@mixin tab-max {
+    @media (max-width: #{$screen-tab-max}) { 
+        @content;
+    }
+}
+@mixin md-min {
+    @media (min-width: #{$screen-md-min}) { 
+        @content;
+    }
+}
+@mixin md-max {
+    @media (max-width: #{$screen-md-max}) { 
+        @content;
+    }
+}
+@mixin lg-min {
+    @media (min-width: #{$screen-lg-min}) { 
+        @content;
+    }
+}
+@mixin lg-max {
+    @media (max-width: #{$screen-lg-max}) { 
+        @content;
+    }
+}
+@mixin xl-min {
+    @media (min-width: #{$screen-xl-min}) { 
+        @content;
+    }
+}
+
+// Custom Minimum
+@mixin rwd-min($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
+// Custom Maximum
+@mixin rwd-max($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
+
+
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+@mixin animation() { 
+// @mixin animation($str) { 
+    // animation: #{$str};  
+    @content;
+}
+

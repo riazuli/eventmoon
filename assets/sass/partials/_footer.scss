@@ -1,0 +1,104 @@
+footer#footer-section {
+    .container {
+        @include xl-min {
+            max-width: 1270px;
+        }
+    }
+
+    .footer-top {
+        padding: 50px 0;
+        background: #EFF6FF;
+        @include lg-max {
+            padding-bottom: 0px; 
+        }
+
+        .logo-icons {
+            border-bottom: 1px solid rgba(133, 159, 191, .25);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            .footer-logo {
+                img {}
+            }
+
+            .social-icons {
+                @include mobile-max {
+                    margin-top: 20px;
+                }
+                a {
+                    font-size: 14px;
+                    color: #12121F;
+                    @include tab-min {
+                        margin-left: 20px;
+                    }
+                    @include mobile-max {
+                        margin-right: 20px;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                    span {
+                        color: rgba(#12121F, .51);
+                    }
+                }
+            }
+        }
+
+        .footer-widgets {
+            .footer-widget {
+                font-size: 15px;
+                color: #12121F;
+                @include lg-max {
+                    margin-bottom: 65px; 
+                }
+
+                h3.footer-title {
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+
+                .footer-links-wrap {
+                    ul.footer-links {
+                        flex: 0 0 50%;
+                        width: 50%;
+
+                        li {
+                            a {
+                                color: #12121F;
+                                padding: 5px 0;
+                            }
+                        }
+                    }
+                }
+
+                p.widget-text {
+                   
+                }
+
+                a.widget-email {
+                    color: #1D79F3;
+                    margin-top: 10px;
+                }
+
+                .footer-images {
+                    a {
+                        display: block;
+                        &:last-child {
+                            margin-top: 20px;
+                        }
+                        img {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        padding: 20px 0;
+        p {
+            color: rgba(#23243A,.5)
+        }
+    }
+}

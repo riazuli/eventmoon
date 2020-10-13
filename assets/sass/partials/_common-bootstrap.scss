@@ -1,0 +1,138 @@
+.section-padding {
+    padding: 75px 0;
+}
+
+.event-title {
+    h2 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+        color: #140930;
+        position: relative;
+        padding-top: 30px;
+        text-align: center;
+        margin-bottom: 70px;
+
+        &:after {
+            position: absolute;
+            width: 110px;
+            height: 4px;
+            background: #1D79F3;
+            content: " ";
+            top: 0;
+            left: 50%;
+            margin-left: -55px;
+        }
+
+        span {
+            font-size: 25px;
+            color: $blue;
+            display: block;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+}
+
+.view-all-wrap {
+    margin-top: 60px;
+
+    a.view-all-btn {
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        padding: 15px 45px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+
+        &:after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: " ";
+            background: linear-gradient(270deg, #FF3B80 0%, #BF3FA4 100%);
+            transform: translateY(-180deg);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            &:after {
+                // transform: translateY(50deg);
+                // display: none; 
+            }
+        }
+    }
+}
+
+.share-btn,
+.buy-now-btn {
+    color: $white;
+    background: $blue;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+    padding: 9px 0;
+    margin-right: 15px;
+    font-size: 15px;
+    border: 2px solid rgba(#1D79F3, .1);
+    font-weight: 600;
+}
+
+.share-btn {
+    color: $blue;
+    background: $white;
+}
+
+.buy-now-btn {
+    &:hover {
+        color: #fff;
+        opacity: .85;
+    }
+}
+.img-opacity {
+    position: relative;
+    @extend %img-opacity;
+}
+.absolute-content {
+    @extend %absolute-content; 
+}
+
+.container.slice-container {
+    .row.custom-gutters {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.date-month-btn {
+    background: #F3F3F5;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    margin-right: 20px;
+
+    .month {
+        color: $blue;
+        font-weight: 600;
+        font-size: 21px;
+    }
+
+    .date {
+
+        font-family: $secondary-font;
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 39px;
+        color: #140930;
+    }
+}

@@ -1,0 +1,64 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+button,
+input {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+  position: relative;
+}
+
+// Chrome, Safari, Edge, Opera 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+// Firefox 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+p {
+  //     color: #ffffff; 
+  // font-size: $primary-font-size;
+  // letter-spacing: .5px;
+  // line-height: 26px;
+  // margin-top: 0;
+  // margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // margin-top: 0;
+  // margin-bottom: 20px;
+}
