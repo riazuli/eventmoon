@@ -1,5 +1,10 @@
 /* Welcome Section */
 section#welcome-section {
+    margin-top: 110px;
+    @include lg-max {
+        margin-top: 95.63px;
+    }
+
     @include mobile-max {
         .container {
             overflow-x: hidden;
@@ -53,10 +58,22 @@ section#welcome-section {
         height: 100%;
 
         .comming-soon {
-
             @include mobile-max {
                 margin-left: auto;
                 margin-right: auto;
+                transform: translateX(15px);
+            }
+
+            @include rwd-max(479) {
+                transform: translateX(15px) scale(.9)
+            }
+
+            @include rwd-max(383) {
+                transform: translateX(0px) scale(.75)
+            }
+
+            @include rwd-max(350) {
+                transform: translateX(-22px) scale(.75)
             }
 
             a.comming-soon-btn {
@@ -68,19 +85,24 @@ section#welcome-section {
                 font-weight: 700;
                 letter-spacing: 2.8px;
                 padding-right: 20px;
+                min-width: 193.95px;
 
                 @include tab-min {
                     height: 60px;
                     margin-left: 45px;
-                    min-width: 193.95px;
                 }
 
                 @include mobile-max {
-                    max-width: 200px;
-                    padding: 20px 10px;
-                    border-radius: 10px;
-                    margin-bottom: 10px;
+                    padding: 18px 10px;
                 }
+
+                @include rwd-max(479) {
+                    min-width: 165px;
+                    font-size: 12px;
+                    padding: 15px 10px;
+                }
+
+                @include rwd-max(383) {}
 
                 &:hover {
                     opacity: .75;
@@ -94,14 +116,18 @@ section#welcome-section {
                     top: 0;
                     border: 30px solid $blue;
 
-                    @include mobile-max {
-                        display: none;
+                    @include rwd-max(479) {
+                        border: 27.5px solid #1D79F3;
                     }
                 }
 
                 &:before {
                     border-left-color: transparent;
                     left: -45px;
+
+                    @include rwd-max(479) {
+                        left: -40px;
+                    }
                 }
 
                 &:after {
@@ -114,11 +140,9 @@ section#welcome-section {
             }
 
             img {
-                @include tab-min {
-                    margin-left: 20px;
-                }
-
+                margin-left: 20px;
                 height: 60px;
+
             }
 
             .app-store {
@@ -156,6 +180,10 @@ section#welcome-section {
                             max-width: 200px;
                             height: auto;
                         }
+
+                        @include rwd-max(479) {
+                            max-width: 180px;
+                        }
                     }
                 }
             }
@@ -183,6 +211,10 @@ section#welcome-section {
                             max-width: 200px;
                             height: auto;
                         }
+
+                        @include rwd-max(479) {
+                            max-width: 180px;
+                        }
                     }
                 }
             }
@@ -204,6 +236,16 @@ section#welcome-section {
                 font-size: 60px;
                 line-height: 70px;
             }
+
+            @include rwd-max(383) {
+                font-size: 50px;
+                line-height: 60px;
+            }
+
+            @include rwd-max(383) {
+                font-size: 47px;
+                line-height: 60px;
+            }
         }
 
         .welcome-buttons {
@@ -218,12 +260,24 @@ section#welcome-section {
                 border-radius: 10px;
                 font-weight: 600;
 
+                @include mobile-max {
+                    width: calc(50% - 8px);
+                    padding: 20px 10px;
+                }
+
+                @include rwd-max(383) {
+                    font-size: 17px;
+                    padding: 15px 5px
+                }
+
+                @include rwd-max(350) {
+                    font-size: 15px;
+                    padding: 13px 5px;
+                    min-width: auto;
+                }
+
                 &.see-events {
                     background: $blue;
-
-                    @include mobile-max {
-                        margin-right: 5px;
-                    }
 
                     &:hover {
                         opacity: .75;
@@ -234,11 +288,6 @@ section#welcome-section {
                     background: #FBB040;
                     margin-left: 10px;
 
-                    @include mobile-max {
-                        margin-left: 0;
-                        margin-top: 10px;
-                    }
-
                     &:hover {
                         opacity: .75;
                     }
@@ -248,10 +297,10 @@ section#welcome-section {
 
         .travel-promote-explore {
             ul {
+                max-width: 487px;
                 background: $white;
                 border-radius: 5px;
 
-                
                 @include tab-min {
                     display: inline-block;
                     overflow: hidden;
@@ -273,6 +322,7 @@ section#welcome-section {
 
                 li {
                     float: left;
+                    width: 33.3334%;
 
                     &:last-of-type {
                         a {
@@ -283,7 +333,6 @@ section#welcome-section {
                     }
 
                     @include mobile-max {
-                        float: none;
                         text-align: center;
                     }
 
@@ -293,6 +342,9 @@ section#welcome-section {
                         position: relative;
                         transition: .25s;
                         color: #140930;
+                        @include rwd-max(383) {
+                            padding: 0 0 20px 0;
+                        }
 
                         &:after {
                             content: " ";
@@ -303,8 +355,10 @@ section#welcome-section {
                             width: 1px;
                             position: absolute;
                             right: 0;
-
-                            @include mobile-max {
+                            @include rwd-max(479) {
+                                right: 15px;
+                            }
+                            @include rwd-max(383) {
                                 display: none;
                             }
                         }

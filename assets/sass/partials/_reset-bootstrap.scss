@@ -146,7 +146,9 @@ img {
     vertical-align: middle;
 }
 input,
-button {
+input:focus,
+button,
+button:focus {
     outline: 0;
 }
 @include rwd-min(1300) {

@@ -1,4 +1,15 @@
 section#nearby-concert {
+    
+    @include rwd-max(383) {
+        .row.custom-gutters {
+            flex-wrap: wrap;
+            [class*=col-6] {
+                max-width: 100%;
+                width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
     .nearby-concert-item {
         position: relative;
         &:hover {

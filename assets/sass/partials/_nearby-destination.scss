@@ -1,33 +1,13 @@
 .nearby-destination {
     .nearby-destination-items {
-        margin-left: -10px;
-        margin-right: -10px;
-
+        .owl-stage-outer {
+            padding-top: 20px;
+        }
         .nearby-destination-item {
-            float: left;
-            width: 20%;
-            padding: 0 10px;
             position: relative;
             // transition: .5s;
             &.diff {
                 margin-top: -16.5px;
-            }
-            @include md-max {
-                width: 33.333333333333336%;
-                margin-bottom: 30px;
-            }
-            @include tab-max {
-                width: 50%;
-                margin-bottom: 35px;
-                &.diff {
-                    margin-top: 0px;
-                }
-            }
-            @include mobile-max {
-                float: none;
-                max-width: 300px;
-                margin-left: auto;
-                margin-right: auto;
             }
             &:hover {
                 .destination-love-icon {
@@ -57,7 +37,7 @@
                 color: #fff;
                 letter-spacing: 7px;
                 text-align: center;
-                width: 100%;
+                width: calc(100% - 20px);
                 p.city { 
                     font-family: $secondary-font;
                     font-size: 30px;

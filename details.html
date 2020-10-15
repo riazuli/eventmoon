@@ -22,31 +22,36 @@
 
     <!-- Start Header Section -->
     <header id="header-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo-search-menu align-items-xl-center d-xl-flex justify-content-xl-between">
-                        <div class="logo">
-                            <a href="#"><img src="assets/images/logo.png" alt=""></a>
-                        </div>
-                        <div class="navigation-toggle d-block d-xl-none">
-                            <i class="fa fa-bars"></i>
-                        </div>
-                        <div class="navigation d-xl-flex align-items-xl-center">
-                            <div class="search">
-                                <form action="#">
-                                    <div class="search-input">
-                                        <i class="fa fa-search"></i>
-                                        <input type="text" placeholder="Search">
-                                    </div>
-                                </form>
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="logo-search-menu align-items-xl-center d-xl-flex justify-content-xl-between">
+                            <div class="logo">
+                                <a href="#"><img src="assets/images/logo.png" alt=""></a>
                             </div>
-                            <ul class="d-xl-flex align-items-xl-center">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Rewards</a></li>
-                                <li><a href="#">Blogs</a></li>
-                            </ul>
-                            <a href="#" class="signup-btn">Sign in</a>
+                            <div class="search-toggle">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="navigation-toggle d-block d-xl-none">
+                                <img src="assets/images/toggle.png.jpg" alt="">
+                            </div>
+                            <div class="navigation d-xl-flex align-items-xl-center">
+                                <div class="search">
+                                    <form action="#">
+                                        <div class="search-input">
+                                            <i class="fa fa-search"></i>
+                                            <input type="text" placeholder="Search">
+                                        </div>
+                                    </form>
+                                </div>
+                                <ul class="d-xl-flex align-items-xl-center">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Rewards</a></li>
+                                    <li><a href="#">Blogs</a></li>
+                                </ul>
+                                <a href="#" class="signup-btn">Sign in</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,15 +127,18 @@
                         <div class="filters-wrap">
                             <div class="filters d-lg-flex align-items-center">
                                 <div class="select-box">
-                                    <div class="select-box-buttons">
+                                    <div class="select-box-buttons d-flex">
                                         <div class="box-button">
-                                            <!-- <button>iii</button> -->
+                                            <button><img src="assets/images/list-check.png" alt=""></button>
+                                        </div>
+                                        <div class="box-button">
+                                            <button><img src="assets/images/calendar-line.png" alt=""></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="select-box">
                                     <select class="select">
-                                        <option value="value1">Fruits</option>
+                                        <option value="value1">Select your dates</option>
                                         <option value="value1">Mango</option>
                                         <option value="value2">Banana</option>
                                         <option value="value3">Cherries</option>
@@ -139,7 +147,7 @@
                                 </div>
                                 <div class="select-box">
                                     <select class="select">
-                                        <option value="value1">Fruits</option>
+                                        <option value="value1">Select your distance</option>
                                         <option value="value1">Mango</option>
                                         <option value="value2">Banana</option>
                                         <option value="value3">Cherries</option>
@@ -342,7 +350,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3">
+                <div class="col-xl-3 sidebar-col">
                     <div class="sidebar-wrap">
                         <div class="sidebar-img d-md-none d-xl-block">
                             <img src="assets/images/sidebar.jpg" alt="">
@@ -390,82 +398,83 @@
     </section>
     <!-- End Post details section -->
 
-    <!-- Start Footer Section -->
-    <footer id="footer-section">
-        <div class="footer-top">
-            <div class="container">
-                <div class="logo-icons d-sm-flex justify-content-between">
-                    <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="">
+        <!-- Start Footer Section -->
+        <footer id="footer-section">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="logo-icons d-sm-flex justify-content-between">
+                        <div class="footer-logo">
+                            <img src="assets/images/logo.png" alt="">
+                        </div>
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="social-icons">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                            <span>Twitter</span>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-widgets">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-6">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="footer-widget">
-                                        <h3 class="footer-title text-capitalize">Quick links</h3>
-                                        <div class="footer-links-wrap d-xl-flex">
-                                            <ul class="footer-links">
-                                                <li><a href="#">About us</a></li>
-                                                <li><a href="#">Career</a></li>
-                                                <li><a href="#">Help</a></li>
-                                            </ul>
-                                            <ul class="footer-links">
-                                                <li><a href="#">Terms</a></li>
-                                                <li><a href="#">Privacy & Cookies</a></li>
-                                            </ul>
+                    <div class="footer-widgets">
+                        <div class="row">
+                            <div class="col-xl-7 col-lg-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="footer-widget">
+                                            <h3 class="footer-title text-capitalize">Quick links</h3>
+                                            <div class="footer-links-wrap d-xl-flex">
+                                                <ul class="footer-links">
+                                                    <li><a href="#">About us</a></li>
+                                                    <li><a href="#">Career</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                                <ul class="footer-links">
+                                                    <li><a href="#">Terms</a></li>
+                                                    <li><a href="#">Privacy & Cookies</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="footer-widget">
-                                        <h3 class="footer-title text-capitalize">Fan hub</h3>
-                                        <div class="footer-links-wrap d-xl-flex">
-                                            <ul class="footer-links">
-                                                <li><a href="#">Event By Venue</a></li>
-                                                <li><a href="#">Gift Cards</a></li>
-                                                <li><a href="#">Last Minute Services</a></li>
-                                            </ul>
-                                            <ul class="footer-links">
-                                                <li><a href="#">Notifications</a></li>
-                                                <li><a href="#">The SubHub Promise</a></li>
-                                            </ul>
+                                    <div class="col-6">
+                                        <div class="footer-widget">
+                                            <h3 class="footer-title text-capitalize">Fan hub</h3>
+                                            <div class="footer-links-wrap d-xl-flex">
+                                                <ul class="footer-links">
+                                                    <li><a href="#">Event By Venue</a></li>
+                                                    <li><a href="#">Gift Cards</a></li>
+                                                    <li><a href="#">Last Minute Services</a></li>
+                                                </ul>
+                                                <ul class="footer-links">
+                                                    <li><a href="#">Notifications</a></li>
+                                                    <li><a href="#">The SubHub Promise</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-6">
-                            <div class="row">
-                                <div class="col-xl-7">
-                                    <div class="footer-widget">
-                                        <h3 class="footer-title text-capitalize">Contact</h3>
-                                        <p class="widget-text">Eventmoon 260 Wolcott STNew Haven CT 06510</p>
-                                        <a href="#" class="widget-email">contact@eventmoon.com</a>
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="row">
+                                    <div class="col-xl-7">
+                                        <div class="footer-widget">
+                                            <h3 class="footer-title text-capitalize">Contact</h3>
+                                            <p class="widget-text">Eventmoon 260 Wolcott STNew Haven CT 06510</p>
+                                            <a href="#" class="widget-email">contact@eventmoon.com</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-5">
-                                    <div class="footer-widget">
-                                        <h3 class="footer-title text-capitalize">Download</h3>
-                                        <div class="footer-images">
-                                            <a href="#"><img src="assets/images/play-store.png" alt=""></a>
-                                            <a href="#"><img src="assets/images/app-store.png" alt=""></a>
+                                    <div class="col-xl-5">
+                                        <div class="footer-widget">
+                                            <h3 class="footer-title text-capitalize">Download</h3>
+                                            <div class="footer-images">
+                                                <a href="#"><img src="assets/images/play-store.png" alt=""></a>
+                                                <a href="#"><img src="assets/images/app-store.png" alt=""></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -474,16 +483,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <div class="container text-center">
-                <p>Copyright @2020</p>
+            <div class="copyright">
+                <div class="container text-center">
+                    <p>Copyright @2020</p>
+                </div>
             </div>
-        </div>
+    
+        </footer>
+        <!-- End Footer Section -->
 
-    </footer>
-    <!-- End Footer Section -->
-
+    
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>

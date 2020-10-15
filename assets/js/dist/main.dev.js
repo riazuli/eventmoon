@@ -44,6 +44,28 @@
     } else {
       $('.navigation').style.height = 0;
     }
+  }; // Function: Home navigation show hide
+
+
+  UI.prototype.showHideHomeNav = function () {
+    if ($('section#home-navigation') && window.innerWidth <= 1199) {
+      if (this.scrollY > 120) {
+        $('section#home-navigation').style.transform = 'translateY(0)';
+      } else {
+        $('section#home-navigation').style.transform = 'translateY(-100%)';
+      }
+    }
+  }; // Function: Move Landig page Image
+
+
+  UI.prototype.moveLandingImg = function () {
+    if ($('.welcome-content')) {
+      if (window.innerWidth <= 1199) {
+        $('h1.welcome-title').insertAdjacentElement('beforebegin', $('.welcome-img-wrap'));
+      } else {
+        $('.welcome-content').parentElement.insertAdjacentElement('afterend', $('.welcome-img-wrap'));
+      }
+    }
   }; // Function: Next week events same height
 
 
@@ -59,6 +81,40 @@
 
     my();
     window.addEventListener('resize', my);
+  };
+
+  UI.prototype.moveSidebar = function () {
+    if ($('.sidebar-col')) {
+      if (window.innerWidth <= 1199) {
+        $('.tickets').insertAdjacentElement('beforebegin', $('.sidebar-col')); // if($('.sidebar-col')) {
+      } else {
+        $('.tickets').parentElement.insertAdjacentElement('afterend', $('.sidebar-col'));
+      }
+    }
+  };
+
+  UI.prototype.moveButtons = function () {
+    var buttons = $('#post-details-section .buy-now-share-btn');
+    var postInfo = $('#post-details-section .post-info');
+    var postInfoTop = $('#post-details-section .post-info-top');
+
+    if (buttons) {
+      if (window.innerWidth <= 767) {
+        postInfo.insertAdjacentElement('beforeend', buttons); // if($('.sidebar-col')) {
+      } else {
+        postInfoTop.insertAdjacentElement('beforeend', buttons);
+      }
+    }
+  };
+
+  UI.prototype.moveSearch = function () {
+    var nav = $('.navigation');
+
+    if (window.innerWidth <= 767) {
+      nav.insertAdjacentElement('beforebegin', $('header .search'));
+    } else {
+      nav.prepend($('header .search'));
+    }
   }; // Function: All Event listeners
 
 
@@ -68,7 +124,7 @@
     var travelPromoteExploreItems = $('.travel-promote-explore li', true); // Event: Navigation
 
     navToggle.addEventListener('click', ui.menuSlide);
-    window.addEventListener('resize', ui.resetMenuHeight); // Event: Travel
+    window.addEventListener('resize', ui.resetMenuHeight); // Event: Landing Page Tab
 
     travelPromoteExploreItems.forEach(function (li) {
       li.addEventListener('click', function (e) {
@@ -144,13 +200,120 @@
       });
     }); // Event: Load DOM Content
 
-    document.addEventListener('DOMContentLoaded', loadContent);
+    document.addEventListener('DOMContentLoaded', loadContent); // Event : Window Resize
+
+    window.addEventListener('resize', function () {
+      ui.moveLandingImg();
+      ui.moveSidebar();
+      ui.moveButtons();
+      ui.moveSearch();
+    }); // Event: Window Scroll
+
+    window.addEventListener('scroll', function () {
+      ui.showHideHomeNav.call(this);
+    });
   }
 
   allEventListener(); // Function: Load Content
 
   function loadContent() {
     var ui = new UI();
+    ui.moveLandingImg();
+    ui.moveSidebar();
+    ui.moveButtons();
     ui.nextWeekEventsHeight();
+    ui.moveSearch();
   }
-}();
+}(); // jQuery
+
+$(document).ready(function () {
+  $('.search-toggle').on('click', function () {
+    $('.search').slideToggle();
+  });
+
+  if ($(".nearby-destination-items").length) {
+    $(".nearby-destination-items").owlCarousel({
+      items: 5,
+      margin: 20,
+      stagePadding: 50,
+      center: true,
+      loop: true,
+      responsive: {
+        // breakpoint from 0 up
+        0: {
+          items: 1
+        },
+        // breakpoint from 480 up
+        500: {
+          items: 2,
+          center: 0
+        },
+        // breakpoint from 768 up
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4,
+          center: false,
+          loop: true
+        },
+        1200: {
+          items: 5,
+          loop: 0,
+          center: false,
+          stagePadding: 0
+        }
+      }
+    });
+  }
+
+  if ($(".recently-viewed-items").length) {
+    $(".recently-viewed-items").owlCarousel({
+      margin: 20,
+      items: 4,
+      stagePadding: 50,
+      loop: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        992: {
+          items: 3,
+          loop: true
+        },
+        1200: {
+          loop: true,
+          stagePadding: 0
+        }
+      }
+    });
+  }
+
+  if ($(".nearby-concert-items").length) {
+    $(".nearby-concert-items").owlCarousel({
+      margin: 20,
+      items: 4,
+      stagePadding: 50,
+      loop: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        992: {
+          items: 3,
+          loop: true
+        },
+        1200: {
+          loop: true,
+          stagePadding: 0
+        }
+      }
+    });
+  }
+});

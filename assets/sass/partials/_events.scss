@@ -1,15 +1,16 @@
 #events-wrap {
+    margin-top: 185px;
+    @include lg-max {
+        margin-top: 100px;
+    }
     @import 'nearby-destination';
     @import 'trending-events';
 
     .today-thisWeek-nextWeek {
         background: #F3F3F5;
-
         @import 'events/today-events';
         @import 'events/next-week-events';
     }
-
-
     .event-item {
         transition: .5s;
         &:hover {
@@ -134,5 +135,6 @@
             }
         }
     }
+    
 
 }
